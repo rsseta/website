@@ -1,0 +1,136 @@
+html, body {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    scrollbar-width: none;
+}
+
+/* --- NAV --- */
+
+nav{
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+    position: fixed;
+    top: 0;
+    backdrop-filter: blur(2px);
+    z-index: 10;
+    background: rgba(255, 255, 255, 0.2);
+    border: 1px solid rgba(255, 255, 255, 0.4);
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.25);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+}
+
+nav a{
+    text-decoration: none;
+    color: rgba(255, 255, 255);
+    font-size: 20px;
+    padding: 20px;
+    font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+
+/* Container */
+
+.container div{
+    height: 100vh;
+    width: 100vw;
+}
+
+/* --- Bir --- */
+.bir{   
+    background: linear-gradient(#06beb6, #48b1bf);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+/* Orta Div */
+.bir .anadiv{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+    background-color: rgba(255, 0, 0, 0.100);
+    height: 40%;
+    width: 50%;
+    border-radius: 2%;
+    color: white;
+    box-shadow: 10px black;
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+}
+
+.anadiv div {
+    height: 60px;
+    width: 60px;
+    border-radius: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: larger;
+    font-weight: bold;
+    gap: 20px;
+    cursor: pointer;
+}
+
+.anadiv .icon{
+    font-size: 26px;
+}
+
+.anadiv .youtube{
+    background-color: red;
+    width: fit-content;
+    height: 5%;
+    width: 50%;
+    padding: 20px;
+    transition: all 0.3s ease;
+}
+
+.anadiv .instagram{
+    background: linear-gradient(to right, #ff512f, #dd2476);
+    width: fit-content;
+    height: 5%;
+    width: 50%;
+    padding: 20px;
+    transition: all 0.3s ease;
+}
+
+.anadiv .tiktok{
+    background-color: black;
+    width: fit-content;
+    height: 5%;
+    width: 50%;
+    padding: 20px;
+    transition: all 0.3s ease;
+}
+
+.youtube:hover, .instagram:hover, .tiktok:hover {
+    transform: scale(1.1);
+}
+
+/* --- iki --- */
+
+.iki{
+    background: linear-gradient(#48b1bf, rgb(17, 91, 161));
+}
+
+/* --- uc --- */
+
+.uc{
+    background: linear-gradient(rgb(17, 91, 161), #4210a0);
+}
+
+@media screen and (max-width: 10000px) {
+    .anadiv {
+        width: 50%;
+        font-size: smaller;
+    }
+
+    .anadiv div{
+        gap: 15px;
+    }
+}
