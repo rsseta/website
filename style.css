@@ -42,7 +42,7 @@ nav a{
 
 /* --- Bir --- */
 .bir{   
-    background: linear-gradient(#06beb6, #48b1bf);
+    background: linear-gradient(#067bbe, rgb(72, 137, 191));
     display: flex;
     justify-content: center;
     align-items: center;
@@ -54,14 +54,14 @@ nav a{
     justify-content: center;
     align-items: center;
     gap: 20px;
-    background-color: rgba(255, 0, 0, 0.100);
+    /* background-color: rgba(255, 0, 0, 0.100); */
     height: 40%;
-    width: 50%;
-    border-radius: 2%;
+    width: 30%;
     color: white;
+    /* border-radius: 2%;
     box-shadow: 10px black;
     backdrop-filter: blur(10px);
-    -webkit-backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px); */
 }
 
 .anadiv div {
@@ -108,14 +108,24 @@ nav a{
     transition: all 0.3s ease;
 }
 
-.youtube:hover, .instagram:hover, .tiktok:hover {
+.anadiv .kick{
+    background: rgb(0, 253, 97);
+    color: black;
+    width: fit-content;
+    height: 5%;
+    width: 50%;
+    padding: 20px;
+    transition: all 0.3s ease;
+}
+
+.youtube:hover, .instagram:hover, .tiktok:hover, .kick:hover {
     transform: scale(1.1);
 }
 
 /* --- iki --- */
 
 .iki{
-    background: linear-gradient(#48b1bf, rgb(17, 91, 161));
+    background: linear-gradient(rgb(72, 137, 191), rgb(17, 91, 161));
 }
 
 /* --- uc --- */
