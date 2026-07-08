@@ -182,6 +182,35 @@ nav a{
     align-items: center;
 }
 
+.privacy_background{
+    background-color: black;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    left: 10px;
+    margin: 0 auto;
+    text-align: left;
+    padding: 50px 20px;
+}
+
+.privacy_background p,
+.privacy_background ul{
+    margin-left: 5%;
+}
+
+.privacy_background li{
+    margin-bottom: 10px;
+}
+
+.privacy_background hr{
+    margin: 40px 0;
+}
+
+a{
+    text-decoration: none;
+    color: red;
+}
 @media (max-width: 768px) {
     .anadiv {
         
