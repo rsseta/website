@@ -6,6 +6,10 @@ html, body {
     color: aliceblue;
 }
 
+body{
+    background-color: rgb(0, 77, 80);
+}
+
 /* --- NAV --- */
 
 nav{
