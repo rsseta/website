@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -8,54 +9,314 @@
     <link rel="icon" href="images/logo.png" type="image/x-icon">
     <title>Anasayfa</title>
 </head>
+
 <body>
 
     <header>
         <nav>
-            <a id="anasayfa">Anasayfa</a>
-            <a id="projeler">Projeler</a>
-            <a id="videolar">Videolar</a>
+
+            <a class="logo" id="logo">
+                RsSeta
+            </a>
+
+            <div class="nav-links">
+
+                <a class="active", id="anasayfa">Ana Sayfa</a>
+                
+                <a id="projeler">Projeler</a>
+                
+                <a id="hakkimda">Hakkımda</a>
+
+                <a id="icerikler">İçerikler</a>
+
+                <a id="iletisim">İletişim</a>
+
+            </div>
+
         </nav>
     </header>
 
     <main>
         <div class="container">
-            <div class="bir">
-                <div class="anadiv">
-                    <div class="youtube">
-                        <div class="icon"><i class="fa-brands fa-youtube"></i></div>
-                        <div class="text">Youtube</div>
+
+            <!-- Bir -->
+            <section class="bir">
+                <div class="hero-content">
+
+                    <div class="hero-text">
+
+                        <p class="hero-label">
+                            <span></span>
+                            YAZILIM GELİŞTİRİCİ & İÇERİK ÜRETİCİSİ
+                        </p>
+
+                        <h1>
+                            Merhaba, ben
+                            <strong>RsSeta</strong>
+                        </h1>
+
+                        <h2>
+                            Sorunları çözüme götüren <span>yazılımcı.</span>
+                        </h2>
+
+                        <p class="hero-description">
+                            Fikirleri çalışan uygulamalara ve projelere dönüştürüyorum.
+                            Flutter, Python ve web teknolojileriyle kendi projelerimi
+                            geliştiriyor, sürekli yeni şeyler öğreniyorum.
+                        </p>
+
+                        <div class="hero-buttons">
+                            <button class="projects-btn" onclick="document.getElementById('projeler').click()">
+                                Projelerimi Gör
+                                <i class="fa-solid fa-arrow-right"></i>
+                            </button>
+
+                            <button class="contact-btn">
+                                İletişime Geç
+                            </button>
+                        </div>
+
+                        <div class="social-links">
+                            <a href="https://www.youtube.com/@RsSeta" target="_blank">
+                                <i class="fa-brands fa-youtube"></i>
+                            </a>
+
+                            <a href="https://www.instagram.com/rs_seta_dev/" target="_blank">
+                                <i class="fa-brands fa-instagram"></i>
+                            </a>
+
+                            <a href="https://www.tiktok.com/@rssetatt" target="_blank">
+                                <i class="fa-brands fa-tiktok"></i>
+                            </a>
+
+                            <a href="https://kick.com/rsseta" target="_blank">
+                                <i class="fa-brands fa-kickstarter-k"></i>
+                            </a>
+                        </div>
+
                     </div>
-                    <div class="instagram">
-                        <div class="icon"><i class="fa-brands fa-instagram"></i></div>
-                        <div class="text">Instagram</div>
+
+
+                    <div class="hero-profile">
+
+                        <div class="profile-glow"></div>
+
+                        <div class="profile-circle">
+                            <img src="images/logo.png" alt="RsSeta">
+                        </div>
+
+                        <div class="profile-tag tag-1">
+                            <i class="fa-solid fa-code"></i>
+                            Developer
+                        </div>
+
+                        <div class="profile-tag tag-2">
+                            <i class="fa-solid fa-lightbulb"></i>
+                            Problem Solver
+                        </div>
+
                     </div>
-                    <div class="tiktok">
-                        <div class="icon"><i class="fa-brands fa-tiktok"></i></div>
-                        <div class="text">Tiktok</div>
-                    </div>
-                    <div class="kick">
-                        <div class="icon"><i class="fa-brands fa-kickstarter-k"></i></i></div>
-                        <div class="text">Kick</div>
-                    </div>
+
                 </div>
-            </div>
+
+                <div class="scroll-indicator">
+                    <span>Projeleri keşfet</span>
+                    <i class="fa-solid fa-chevron-down"></i>
+                </div>
+            </section>
+            
+            <!-- İki -->
             <div class="iki">
-                <div class="projects">
-                    <div class="myDiary">
-                        <p>Günlük Uygulaması</p>
-                        <img src="images/MyDiary.png" alt="" srcset="">
-                        <a href="https://groups.google.com/g/gunlugum-testers">
-                            <button>İndir</button>
-                        </a>
+                <section class="projects" id="projects">
+                </section>
+            </div>
+
+            <!-- Üç -->
+            <div class="uc">
+                <div class="about">
+
+                    <div class="about-main">
+                        <p class="about-label">HAKKIMDA</p>
+
+                        <h2>
+                            Teknolojiyi,<br>
+                            <span>sorunları çözmek</span><br>
+                            için kullanıyorum.
+                        </h2>
+
+                        <p class="about-text">
+                            Fikirleri çalışan uygulamalara dönüştürüyor,
+                            karşılaştığım problemlere teknolojiyle çözüm
+                            üretmeye çalışıyorum.
+                        </p>
+
+                        <div class="about-tech">
+                            <span>Flutter</span>
+                            <span>Python</span>
+                            <span>Web</span>
+                        </div>
+
+                        <div class="current-project">
+                            <small>🚀 ŞU ANDA ÜZERİNDE ÇALIŞIYORUM</small>
+                            <strong>Günlüğüm</strong>
+                            <p>Flutter + Firebase ile geliştirdiğim sosyal günlük uygulaması.</p>
+                        </div>
                     </div>
+
+
+                    <div class="about-cards">
+
+                        <div class="about-card">
+                            <i class="fa-solid fa-code"></i>
+                            <div>
+                                <h3>Geliştirme</h3>
+                                <p>Flutter<br>Python<br>Web</p>
+                            </div>
+                        </div>
+
+                        <div class="about-card">
+                            <i class="fa-solid fa-brain"></i>
+                            <div>
+                                <h3>Yaklaşım</h3>
+                                <p>Problem çözme<br>Öğrenme<br>Üretme</p>
+                            </div>
+                        </div>
+
+                        <div class="about-card">
+                            <i class="fa-solid fa-bullseye"></i>
+                            <div>
+                                <h3>Hedef</h3>
+                                <p>Teknolojiyi insanların<br>hayatını kolaylaştırmak<br>için kullanmak.</p>
+                            </div>
+                        </div>
+
+                    </div>
+
                 </div>
             </div>
-            <div class="uc"></div>
+
+            <!-- Dört -->
+            <div class="dort">
+
+                <div class="content-section">
+
+                    <p class="content-label">İÇERİKLER</p>
+
+                    <h2>
+                        Öğrenirken keşfettiklerimi<br>
+                        <span>paylaşıyorum.</span>
+                    </h2>
+
+                    <div class="content-cards">
+
+                        <a class="content-card"
+                        href="https://youtu.be/WVo1An9wwmo"
+                        target="_blank"
+                        rel="noopener noreferrer">
+
+                            <img src="https://img.youtube.com/vi/WVo1An9wwmo/maxresdefault.jpg" alt="Video">
+
+                            <div class="content-info">
+                                <span>YouTube</span>
+                                <h3>Video başlığı</h3>
+                            </div>
+
+                        </a>
+
+                        <a class="content-card"
+                        href="https://youtu.be/nYXLJ7TkWPo"
+                        target="_blank"
+                        rel="noopener noreferrer">
+
+                            <img src="https://img.youtube.com/vi/nYXLJ7TkWPo/maxresdefault.jpg" alt="Video">
+
+                            <div class="content-info">
+                                <span>YouTube</span>
+                                <h3>Başka bir video</h3>
+                            </div>
+
+                        </a>
+
+                    </div>
+
+                    <a class="all-content"
+                    href="https://www.youtube.com/@RsSeta"
+                    target="_blank"
+                    rel="noopener noreferrer">
+                        Tüm içerikleri gör →
+                    </a>
+
+                </div>
+
+            </div>
+
+            <!-- Beş -->
+            <div class="bes">
+
+                <div class="contact">
+
+                    <div class="contact-info">
+                        <p class="contact-label">İLETİŞİM</p>
+
+                        <h2>
+                            Bir fikrin mi var?<br>
+                            <span>Birlikte hayata geçirelim.</span>
+                        </h2>
+
+                        <p class="contact-description">
+                            Bir proje hakkında konuşmak, fikir paylaşmak
+                            veya sadece iletişime geçmek istersen bana ulaşabilirsin.
+                        </p>
+
+                        <div class="contact-socials">
+                            <a href="https://github.com/rsseta" target="_blank">
+                                <i class="fa-brands fa-github"></i>
+                            </a>
+
+                            <a href="https://www.instagram.com/rs_seta_dev/" target="_blank">
+                                <i class="fa-brands fa-instagram"></i>
+                            </a>
+
+                            <a href="https://www.youtube.com/@RsSeta" target="_blank">
+                                <i class="fa-brands fa-youtube"></i>
+                            </a>
+                        </div>
+                    </div>
+
+
+                    <form class="contact-form"
+                        action="https://formspree.io/f/xbgrevjz"
+                        method="POST">
+
+                        <div class="input-group">
+                            <label>Adın</label>
+                            <input type="text" name="name" placeholder="Adını yaz..." required>
+                        </div>
+
+                        <div class="input-group">
+                            <label>E-posta</label>
+                            <input type="email" name="email" placeholder="ornek@mail.com" required>
+                        </div>
+
+                        <div class="input-group">
+                            <label>Mesajın</label>
+                            <textarea name="message" placeholder="Mesajını yaz..." required></textarea>
+                        </div>
+
+                        <button type="submit">
+                            Gönder
+                            <i class="fa-solid fa-arrow-right"></i>
+                        </button>
+
+                    </form>
+
+                </div>
+
+            </div>
         </div>
     </main>
 
-    <footer></footer>
+    <footer>© 2026 RsSeta</footer>
 
     
 </body>

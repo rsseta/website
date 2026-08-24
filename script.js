@@ -1,77 +1,67 @@
-// SCROLL
+// --- SCROLL ---
 
 let sayfa = 0;
 
-sayfaBir = document.querySelector(".bir");
-sayfaIki = document.querySelector(".iki");
-sayfaUc = document.querySelector(".uc");
+const sayfaBir = document.querySelector(".bir");
+const sayfaIki = document.querySelector(".iki");
+const sayfaUc = document.querySelector(".uc");
+const sayfaDort = document.querySelector(".dort");
+const sayfaBes = document.querySelector(".bes");
+
+const navs = ["anasayfa", "projeler", "hakkimda", "icerikler", "iletisim"]
 
 // Nav Clicks
-document.getElementById("anasayfa").addEventListener("click", () => {
-  sayfa = 0;
-  scrollToElement(sayfaBir);
-  switchimsi();
-});
-
-document.getElementById("projeler").addEventListener("click", () => {
-  sayfa = 1;
-  scrollToElement(sayfaIki);
-  switchimsi();
-});
-
-document.getElementById("videolar").addEventListener("click", () => {
-  sayfa = 2;
-  scrollToElement(sayfaUc);
-  switchimsi();
+navs.forEach((id, index) => {
+    document.getElementById(id).addEventListener("click", () => {
+        sayfa = index;
+        switchimsi();
+    });
 });
 
 // Wheel
 window.addEventListener("wheel", (e) => {
   e.preventDefault();
-  if(e.deltaY > 0 && sayfa != 2) {
+  if(e.deltaY > 0 && sayfa != 4) {
     sayfa++;
   }
   else if(e.deltaY < 0 && sayfa != 0) {
     sayfa--;
   }
 
-  else if(e.deltaY > 0 && sayfa == 2) {
-    sayfa = 0;
-  }
-
-  else if(e.deltaY < 0 && sayfa == 0) {
-    sayfa = 2;
-  }
-
   switchimsi();
 }, { passive: false });
 
+// Touch
+let touchStartY = 0;
 
-// Nav Renkleri
+window.addEventListener("touchstart", e => {
+    touchStartY = e.touches[0].clientY;
+});
+
+window.addEventListener("touchend", e => {
+    const touchEndY = e.changedTouches[0].clientY;
+    const diff = touchStartY - touchEndY;
+
+    if (Math.abs(diff) < 50) return;
+
+    if (diff > 0 && sayfa < 2) sayfa++;
+    else if (diff < 0 && sayfa > 0) sayfa--;
+
+    switchimsi();
+});
+
+// Scrolling
 function switchimsi() {
-  switch(sayfa) {
-    case 0:
-      sayfa = 0;
-      scrollToElement(document.querySelector(".bir"));
-      renkDegisim("rgba(255, 255, 255)", "rgba(128, 128, 128, 0.6)", "rgba(128, 128, 128, 0.6)");
-      break;
-    case 1:
-      sayfa = 1;
-      scrollToElement(document.querySelector(".iki"));
-      renkDegisim("rgba(128, 128, 128, 0.6)", "rgba(255, 255, 255)", "rgba(128, 128, 128, 0.6)");
-      break;
-    case 2:
-      sayfa = 2;
-      scrollToElement(document.querySelector(".uc"));
-      renkDegisim("rgba(128, 128, 128, 0.6)", "rgba(128, 128, 128, 0.6)", "rgba(255, 255, 255)");
-      break;
-  }
-}
+    const sayfalar = [sayfaBir, sayfaIki, sayfaUc, sayfaDort, sayfaBes];
 
-function renkDegisim(anasayfa, projeler, videolar){
-  document.getElementById("anasayfa").style.color = anasayfa;
-  document.getElementById("projeler").style.color = projeler;
-  document.getElementById("videolar").style.color = videolar;
+    sayfalar.forEach(s => s.classList.remove("active"));
+
+    document.querySelectorAll(".nav-links a")
+        .forEach(nav => nav.classList.remove("active"));
+
+    scrollToElement(sayfalar[sayfa]);
+
+    document.getElementById(navs[sayfa]).classList.add("active");
 }
 
 function scrollToElement(index) {
@@ -82,13 +72,32 @@ index.scrollIntoView({
 });
 }
 
+const projects = [
+    {
+        image: "images/MyDiary.png",
+        title: "Günlük Uygulamam",
+        description: "Flutter • Firestore",
+        link: "https://groups.google.com/g/gunlugum-testers"
+    },
+    {
+        image: "images/website.png",
+        title: "Web sayfam",
+        description: "HTML • CSS • Javascritp",
+        link: "https://example.com"
+    },
+];
 
-// Social Media Button
+const projectsContainer = document.getElementById("projects");
 
-document.querySelector(".youtube").addEventListener("click", (e) => window.open("https://www.youtube.com/@RsSeta"), false);
-
-document.querySelector(".instagram").addEventListener("click", (e) => window.open("https://www.instagram.com/rs_seta/"), false);
-
-document.querySelector(".tiktok").addEventListener("click", (e) => window.open("https://www.tiktok.com/@rssetatt"), false);
-
-document.querySelector(".kick").addEventListener("click", (e) => window.open("https://kick.com/rsseta"), false);
+projects.forEach(project => {
+    projectsContainer.innerHTML += `
+        <div class="card">
+            <img src="${project.image}" alt="${project.title}">
+            <div class="title">${project.title}</div>
+            <div class="description">${project.description}</div>
+            <a href="${project.link}" target="_blank">
+                <button>İncele</button>
+            </a>
+        </div>
+    `;
+});
