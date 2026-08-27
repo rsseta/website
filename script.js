@@ -82,7 +82,7 @@ const projects = [
     {
         image: "images/website.png",
         title: "Web sayfam",
-        description: "HTML • CSS • Javascritp",
+        description: "HTML • CSS • Javascript",
         link: "https://example.com"
     },
 ];
